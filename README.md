@@ -47,11 +47,15 @@ The example above returns the `count` of total Classifications data file parts a
 
 ### Request Parameters
 
+The following table describes the classifications job file partition list request parameter:
+
 | Name | Required | Type | Description |
 | --- | --- | --- | --- |
 | `job_id` | required | string | The job ID |
 
 ### Response Parameters
+
+The following table describes the classifications job file partition list response parameters:
 
 | Name | Type | Description |
 | --- | --- | --- |
@@ -101,6 +105,8 @@ The example above requests the Classifications data file part named `part1.tsv` 
 The example above responds with the data of the file part specified in the request.
 
 ### Request Parameters
+
+The following table describes the classification export job file part request parameters:
 
 | Name | Required | Type | Description |
 | --- | --- | --- | --- |
