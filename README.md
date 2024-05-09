@@ -1,8 +1,8 @@
 # New Parameters
 
-## GET classifications job file partition list
+## GET classification job file partition list
 
-Use this endpoint to retrieve a list of file parts partitioned from a complete Classifications file belonging to an existing job.
+Use this endpoint to retrieve a list of file parts partitioned from a complete classification file belonging to an existing job. The individual file parts returned may be used in the [GET classification export job file part](#get-classification-export-job-file-part) endpoint to be exported. For more information on classification data, see [Classification data files](https://experienceleague.adobe.com/en/docs/analytics/components/classifications/classifications-importer/c-saint-data-files).
 
 `GET https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/classifications/job/export/file/{JOB_ID}/list`
 
@@ -39,23 +39,23 @@ curl -X GET "https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/classifications/
 
 #### Request example details
 
-The example above requests the list of Classifications data file parts for the `16e38fbc-fc82-4fdf-88de-ec33e63489d5` job ID.
+The example above requests the list of classification data file parts for the `16e38fbc-fc82-4fdf-88de-ec33e63489d5` job ID.
 
 #### Response example details
 
-The example above returns the `count` of total Classifications data file parts alongside the file name of each part.
+The example above returns the `count` of total classification data file parts alongside the file name of each part.
 
 ### Request Parameters
 
-The following table describes the classifications job file partition list request parameter:
+The following table describes the classification job file partition list request parameter:
 
 | Name | Required | Type | Description |
 | --- | --- | --- | --- |
-| `job_id` | required | string | The job ID |
+| `job_id` | required | string | The job ID for which the file parts will be returned |
 
 ### Response Parameters
 
-The following table describes the classifications job file partition list response parameters:
+The following table describes the classification job file partition list response parameters:
 
 | Name | Type | Description |
 | --- | --- | --- |
@@ -64,7 +64,7 @@ The following table describes the classifications job file partition list respon
 
 ## GET classification export job file part
 
-Use this endpoint to retrieve a part of a complete Classifications data file. The GET classifications job file partition list endpoint may be used to retrieve the file names required for this endpoint. For more information on classification data, see [Classification data files](https://experienceleague.adobe.com/en/docs/analytics/components/classifications/classifications-importer/c-saint-data-files).
+Use this endpoint to retrieve a part of a complete classification data file. The [GET classification job file partition list](#get-classification-job-file-partition-list) endpoint may be used to retrieve the file names required for this endpoint. For more information on classification data, see [Classification data files](https://experienceleague.adobe.com/en/docs/analytics/components/classifications/classifications-importer/c-saint-data-files).
 
 `GET https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/classifications/job/export/file/{JOB_ID}/{FILE_NAME}`
 
@@ -90,15 +90,15 @@ curl -X GET "https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/classifications/
 ## SC   '## SC' indicates a SiteCatalyst pre-process header. Please do not remove these lines.
 ## SC   D:YYYY-07-31 18:00:11  A:xxxxxx:xx
  
-Key File Name   File Option Directory
-KeyYYYY0522-1   File Name-1 Option-1    Directory-1
-KeyYYYY0522-2   File Name-2 Option-2    Directory-2
-KeyYYYY0522-3   File Name-3 Option-3    Directory-3
+Key    File Name   File Option    Directory
+KeyYYYY0522-1     File Name-1    Option-1    Directory-1
+KeyYYYY0522-2     File Name-2    Option-2    Directory-2
+KeyYYYY0522-3     File Name-3    Option-3    Directory-3
 ```
 
 #### Request example details
 
-The example above requests the Classifications data file part named `part1.tsv` belonging to the job `16e38fbc-fc82-4fdf-88de-ec33e63489d5`.
+The example above requests the classification data file part named `part1.tsv` belonging to the job `16e38fbc-fc82-4fdf-88de-ec33e63489d5`.
 
 #### Response example details
 
